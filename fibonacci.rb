@@ -7,8 +7,10 @@ def fibs(input)
       fib_array.push(i)
       p fib_array
     else
-      x = fib_array[i - 1] + fib_array[i - 2]
-      fib_array.push(x)
+      #x = fib_array[i - 1] + fib_array[i - 2]
+      sqrt5 = Math.sqrt(5); 
+      x = (((1 + sqrt5)** i) - ((1  - sqrt5)** i)) / ((2 ** i) * sqrt5)
+      fib_array.push(x.round)
       p fib_array
     end
   end
@@ -17,3 +19,14 @@ end
 #unshift to populate array
 
 fibs(8)
+
+def fibs_rec(input, rec_array = [])
+  if (input < 0) 
+    return rec_array
+  elsif input == 0 || input == 1
+    return rec_array.push(input)
+  else
+  end
+end
+
+#p fibs_rec(8)
